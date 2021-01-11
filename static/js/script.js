@@ -15,6 +15,11 @@ $(document).ready(function(){
     $('.tooltipped').tooltip();
   });
 
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+        
+
 $(document).ready(function(){
     $('.datepicker').datepicker({
         format: "dd mmmm, yyyy",

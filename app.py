@@ -126,6 +126,8 @@ def edit_task(task_id):
     # task_id var converted using ObjectId so mongo can read it.
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
 
+    # edit_task is sending the task var below which is the whole
+    # mongodb task obj identified by its id above.
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_task.html", task=task, categories=categories)
 
